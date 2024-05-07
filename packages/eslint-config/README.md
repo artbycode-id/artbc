@@ -1,3 +1,3 @@
-# `@turbo/eslint-config`
+# `@artbc/eslint-config`
 
 Collection of internal eslint configurations.

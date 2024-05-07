@@ -1,20 +1,45 @@
 {
   "name": "artbc",
+  "version": "0.0.1",
   "private": true,
+  "license": "MIT",
+  "author": {
+    "name": "artbc",
+    "url": "https://twitter.com/artbc"
+  },
   "scripts": {
     "build": "turbo build",
+    "build:docs": "turbo --filter docs build",
     "dev": "turbo dev",
+    "docs:dev": "turbo --filter docs dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "lint:fix": "turbo run lint:fix",
+    "format:write": "turbo run format:write",
+    "format:check": "turbo run format:check",
+    "generate": "turbo gen",
+    "workspace:new": "pnpm generate workspace",
+    "workspace:copy": "pnpm generate workspace --copy",
+    "release": "changeset version",
+    "prepare": "husky"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@artbc/eslint-config": "workspace:*",
+    "@artbc/typescript-config": "workspace:*",
+    "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.14",
     "turbo": "latest"
   },
-  "packageManager": "pnpm@8.9.0",
+  "packageManager": "pnpm@9.1.0",
   "engines": {
     "node": ">=18"
+  },
+  "dependencies": {
+    "@changesets/changelog-github": "^0.5.0",
+    "@changesets/cli": "^2.27.1",
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2"
   }
 }

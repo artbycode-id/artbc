@@ -7,23 +7,22 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "prettier",
-    require.resolve("@vercel/style-guide/eslint/next"),
     "eslint-config-turbo",
+    "plugin:tailwindcss/recommended",
   ],
-  globals: {
-    React: true,
-    JSX: true,
+  plugins: ["only-warn", "tailwindcss"],
+  rules: {
+    "tailwindcss/no-custom-classname": "off",
   },
-  env: {
-    node: true,
-    browser: true,
-  },
-  plugins: ["only-warn"],
   settings: {
     "import/resolver": {
       typescript: {
         project,
       },
+    },
+    tailwindcss: {
+      callees: ["cn", "cva"],
+      config: "tailwind.config.js",
     },
   },
   ignorePatterns: [
@@ -31,8 +30,9 @@ module.exports = {
     ".*.js",
     "node_modules/",
   ],
-  overrides: [{ files: ["*.js?(x)", "*.ts?(x)"] }],
-  rules: {
-    "@next/next/no-html-link-for-pages": "off",
-  },
+  overrides: [
+    {
+      files: ["*.js?(x)", "*.ts?(x)"],
+    },
+  ],
 }
