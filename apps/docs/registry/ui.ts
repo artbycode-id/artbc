@@ -6,4 +6,9 @@ export const ui: Registry = [
     type: "components:ui",
     files: ["ui/alert.tsx"],
   },
+  {
+    name: "button",
+    type: "components:ui",
+    files: ["ui/button.tsx"],
+  },
 ]
