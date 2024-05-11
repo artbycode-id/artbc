@@ -2,7 +2,7 @@
 
 Accessible and customizable components that you can copy and paste into your apps. Free. Open Source. **Use this to build your own component library**.
 
-![hero](apps/www/public/og.jpg)
+<!-- ![hero](apps/www/public/og.jpg) -->
 
 ## Documentation
 
@@ -14,4 +14,4 @@ Please read the [contributing guide](/CONTRIBUTING.md).
 
 ## License
 
-Licensed under the [MIT license](https://github.com/artbycode/artbc/blob/main/LICENSE.md).
+Licensed under the [MIT license](https://github.com/artbycode-id/artbc/blob/main/LICENSE.md).
