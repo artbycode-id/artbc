@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "license": "MIT",
+  "type": "module",
   "author": {
     "name": "artbc",
     "url": "https://twitter.com/artbc"
@@ -10,16 +11,24 @@
   "scripts": {
     "build": "turbo build",
     "build:docs": "turbo --filter docs build",
+    "build:cli": "turbo --filter artbc-ui build",
     "dev": "turbo dev",
     "docs:dev": "turbo --filter docs dev",
+    "cli:dev": "turbo --filter artbc-ui dev",
+    "cli:start": "turbo --filter artbc-ui start:dev",
     "lint": "turbo lint",
     "lint:fix": "turbo run lint:fix",
+    "typecheck": "turbo run typecheck",
     "format:write": "turbo run format:write",
     "format:check": "turbo run format:check",
     "generate": "turbo gen",
     "workspace:new": "pnpm generate workspace",
     "workspace:copy": "pnpm generate workspace --copy",
+    "check": "turbo lint typecheck format:check",
     "release": "changeset version",
+    "pub:beta": "cd packages/artbc-ui && pnpm pub:beta",
+    "pub:release": "cd packages/artbc-ui && pnpm pub:release",
+    "test": "turbo run test --force",
     "prepare": "husky"
   },
   "devDependencies": {
@@ -30,16 +39,20 @@
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.14",
-    "turbo": "latest"
-  },
-  "packageManager": "pnpm@9.1.0",
-  "engines": {
-    "node": ">=18"
+    "turbo": "latest",
+    "vite-tsconfig-paths": "^4.3.2",
+    "vitest": "^1.6.0"
   },
   "dependencies": {
     "@changesets/changelog-github": "^0.5.0",
     "@changesets/cli": "^2.27.1",
     "@commitlint/cli": "^19.3.0",
-    "@commitlint/config-conventional": "^19.2.2"
+    "@commitlint/config-conventional": "^19.2.2",
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3"
+  },
+  "packageManager": "pnpm@9.1.0",
+  "engines": {
+    "node": ">=18"
   }
 }
