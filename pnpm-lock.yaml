@@ -60,6 +60,12 @@ importers:
 
   apps/docs:
     dependencies:
+      '@artbc/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      '@radix-ui/react-slot':
+        specifier: ^1.0.2
+        version: 1.0.2(@types/react@18.2.61)(react@18.2.0)
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
@@ -1095,7 +1101,23 @@ packages:
   '@pkgr/utils@2.4.2':
     resolution: {integrity: sha512-POgTXhjrTfbTV63DiFXav4lBHiICLKKwDeaKn9Nphwj7WH6m0hMMCaJkMyRWjgtPFyRKRVoMXXjczsTQRDEhYw==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
+  '@radix-ui/react-compose-refs@1.0.1':
+    resolution: {integrity: sha512-fDSBgd44FKHa1FRMU59qBMPFcl2PZE+2nmqunj+BWFyYYjnhIDWL2ItDs3rrbJDQOtzt5nIebLCQc4QRfz6LJw==}
+    peerDependencies:
+      '@types/react': '*'
+      react: ^16.8 || ^17.0 || ^18.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
 
+  '@radix-ui/react-slot@1.0.2':
+    resolution: {integrity: sha512-YeTpuq4deV+6DusvVUW4ivBgnkHwECUu0BiN43L5UCDFgdhsRUWAghhTF5MbvNTPzmiFOx90asDSUjWuCNapwg==}
+    peerDependencies:
+      '@types/react': '*'
+      react: ^16.8 || ^17.0 || ^18.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
   '@rollup/rollup-android-arm-eabi@4.17.2':
     resolution: {integrity: sha512-NM0jFxY8bB8QLkoKxIQeObCaDlJKewVlIEkuyYKm5An1tdVZ966w2+MPQ2l8LBZLjR+SgyV+nRkTIunzOYBMLQ==}
     cpu: [arm]
@@ -5201,6 +5223,21 @@ snapshots:
       open: 9.1.0
       picocolors: 1.0.0
       tslib: 2.6.2
+
+  '@radix-ui/react-compose-refs@1.0.1(@types/react@18.2.61)(react@18.2.0)':
+    dependencies:
+      '@babel/runtime': 7.24.5
+      react: 18.2.0
+    optionalDependencies:
+      '@types/react': 18.2.61
+
+  '@radix-ui/react-slot@1.0.2(@types/react@18.2.61)(react@18.2.0)':
+    dependencies:
+      '@babel/runtime': 7.24.5
+      '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.2.61)(react@18.2.0)
+      react: 18.2.0
+    optionalDependencies:
+      '@types/react': 18.2.61
 
   '@rollup/rollup-android-arm-eabi@4.17.2':
     optional: true
