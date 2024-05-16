@@ -1,3 +1,5 @@
+"use client"
+
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
@@ -26,7 +28,6 @@ const buttonVariants = cva(
       radius: {
         default: "rounded-md",
         rounded: "rounded",
-        xs: "rounded-xs",
         sm: "rounded-sm",
         lg: "rounded-lg",
         xl: "rounded-xl",
@@ -58,7 +59,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       radius,
       loading,
       disabled,
-      icon = <Spinner size="sm" variant="primary" />,
+      icon = <Spinner size="sm" className="mr-2 text-current" />,
       children,
       ...props
     },
@@ -72,7 +73,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         disabled={loading || disabled}
         {...props}
       >
-        {loading ? icon : children}
+        {loading && icon}
+        {children}
       </Component>
     )
   }
