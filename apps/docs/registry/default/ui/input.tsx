@@ -26,8 +26,8 @@ const inputVariants = cva(
       },
       radius: {
         default: "rounded-lg",
-        xs: "rounded",
-        sm: "rounded-sm",
+        xs: "rounded-sm",
+        sm: "rounded",
         md: "rounded-md",
         xl: "rounded-xl",
       },
