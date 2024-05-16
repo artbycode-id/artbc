@@ -26,4 +26,9 @@ export const ui: Registry = [
     type: "components:ui",
     files: ["ui/card.tsx"],
   },
+  {
+    name: "input",
+    type: "components:ui",
+    files: ["ui/input.tsx"],
+  },
 ]
