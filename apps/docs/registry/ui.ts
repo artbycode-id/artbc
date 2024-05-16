@@ -32,4 +32,9 @@ export const ui: Registry = [
     dependencies: ["@radix-ui/react-accordion"],
     files: ["ui/accordion.tsx"],
   },
+  {
+    name: "input",
+    type: "components:ui",
+    files: ["ui/input.tsx"],
+  },
 ]
