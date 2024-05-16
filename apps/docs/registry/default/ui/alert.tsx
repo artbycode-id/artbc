@@ -1,3 +1,5 @@
+"use client"
+
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 
@@ -13,12 +15,11 @@ const alertVariants = cva(
         outline: "border-input bg-background text-foreground border",
       },
       radius: {
+        default: "rounded-xl",
         rounded: "rounded",
-        xs: "rounded-xs",
         sm: "rounded-sm",
         md: "rounded-md",
         lg: "rounded-lg",
-        default: "rounded-xl",
       },
     },
     defaultVariants: {
