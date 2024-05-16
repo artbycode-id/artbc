@@ -1,3 +1,5 @@
+"use client"
+
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 
@@ -22,10 +24,10 @@ const inputVariants = cva(
         lg: "h-12 text-xl placeholder:text-lg",
         xl: "h-14 text-2xl placeholder:text-xl",
       },
-      rounded: {
+      radius: {
         default: "rounded-lg",
-        xs: "rounded",
-        sm: "rounded-sm",
+        xs: "rounded-sm",
+        sm: "rounded",
         md: "rounded-md",
         xl: "rounded-xl",
       },
@@ -33,7 +35,7 @@ const inputVariants = cva(
     defaultVariants: {
       variant: "default",
       size: "default",
-      rounded: "default",
+      radius: "default",
     },
   }
 )
@@ -56,7 +58,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
       className,
       variant,
       size,
-      rounded,
+      radius,
       type,
       leftSection,
       rightSection,
@@ -75,7 +77,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
         <input
           type={type}
           className={cn(
-            inputVariants({ variant, size, rounded }),
+            inputVariants({ variant, size, radius }),
             leftSection && "pl-10",
             rightSection && "pr-10",
             type && types[type as keyof typeof types],
