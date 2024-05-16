@@ -26,4 +26,10 @@ export const ui: Registry = [
     type: "components:ui",
     files: ["ui/card.tsx"],
   },
+  {
+    name: "accordion",
+    type: "components:ui",
+    dependencies: ["@radix-ui/react-accordion"],
+    files: ["ui/accordion.tsx"],
+  },
 ]
