@@ -1,16 +1,17 @@
+"use client"
+
 import * as React from "react"
 import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
 
-const cardVariants = cva("bg-card text-card-foreground border", {
+const cardVariants = cva("bg-background text-foreground border", {
   variants: {
     radius: {
+      default: "rounded-lg",
       rounded: "rounded",
-      xs: "rounded-xs",
       sm: "rounded-sm",
       md: "rounded-md",
-      default: "rounded-lg",
       xl: "rounded-xl",
     },
     shadow: {
