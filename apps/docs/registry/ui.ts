@@ -38,4 +38,9 @@ export const ui: Registry = [
     type: "components:ui",
     files: ["ui/input.tsx"],
   },
+  {
+    name: "textarea",
+    type: "components:ui",
+    files: ["ui/textarea.tsx"],
+  },
 ]
