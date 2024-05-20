@@ -44,4 +44,9 @@ export const ui: Registry = [
     dependencies: ["@radix-ui/react-radio-group"],
     files: ["ui/radio-group.tsx"],
   },
+  {
+    name: "textarea",
+    type: "components:ui",
+    files: ["ui/textarea.tsx"],
+  },
 ]
