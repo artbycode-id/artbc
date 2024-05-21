@@ -39,6 +39,12 @@ export const ui: Registry = [
     files: ["ui/input.tsx"],
   },
   {
+    name: "select",
+    type: "components:ui",
+    dependencies: ["@radix-ui/react-select"],
+    files: ["ui/select.tsx"],
+  },
+  {
     name: "textarea",
     type: "components:ui",
     files: ["ui/textarea.tsx"],
