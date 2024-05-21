@@ -28,6 +28,19 @@ export const ui: Registry = [
     files: ["ui/card.tsx"],
   },
   {
+    name: "command",
+    type: "components:ui",
+    dependencies: ["cmdk"],
+    registryDependencies: ["dialog"],
+    files: ["ui/command.tsx"],
+  },
+  {
+    name: "dialog",
+    type: "components:ui",
+    dependencies: ["@radix-ui/react-dialog"],
+    files: ["ui/dialog.tsx"],
+  },
+  {
     name: "accordion",
     type: "components:ui",
     dependencies: ["@radix-ui/react-accordion"],
@@ -42,5 +55,11 @@ export const ui: Registry = [
     name: "textarea",
     type: "components:ui",
     files: ["ui/textarea.tsx"],
+  },
+  {
+    name: "popover",
+    type: "components:ui",
+    dependencies: ["@radix-ui/react-popover"],
+    files: ["ui/popover.tsx"],
   },
 ]
