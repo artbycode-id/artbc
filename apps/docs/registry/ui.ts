@@ -28,6 +28,12 @@ export const ui: Registry = [
     files: ["ui/card.tsx"],
   },
   {
+    name: "checkbox",
+    type: "components:ui",
+    dependencies: ["@radix-ui/react-checkbox"],
+    files: ["ui/checkbox.tsx"],
+  },
+  {
     name: "accordion",
     type: "components:ui",
     dependencies: ["@radix-ui/react-accordion"],
