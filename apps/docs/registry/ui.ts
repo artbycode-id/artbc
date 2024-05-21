@@ -58,10 +58,16 @@ export const ui: Registry = [
     files: ["ui/input.tsx"],
   },
   {
+    name: "select",
+    type: "components:ui",
+    dependencies: ["@radix-ui/react-select"],
+    files: ["ui/select.tsx"],
+  },
+  {
     name: "radio-group",
     type: "components:ui",
     dependencies: ["@radix-ui/react-radio-group"],
-    files: ["ui/radio-group.tsx"],
+    files: ["ui/radio-group.tsx"]
   },
   {
     name: "textarea",
