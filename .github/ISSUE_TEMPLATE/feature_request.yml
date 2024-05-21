@@ -1,7 +1,7 @@
 name: "Feature request"
 description: Create a feature request for artbc-ui
 title: "[feat]: "
-labels: ["area: request"]
+labels: ["enhancement"]
 body:
   - type: markdown
     attributes:
