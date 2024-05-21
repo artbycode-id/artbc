@@ -41,6 +41,12 @@ export const ui: Registry = [
     files: ["ui/dialog.tsx"],
   },
   {
+    name: "checkbox",
+    type: "components:ui",
+    dependencies: ["@radix-ui/react-checkbox"],
+    files: ["ui/checkbox.tsx"],
+  },
+  {
     name: "accordion",
     type: "components:ui",
     dependencies: ["@radix-ui/react-accordion"],
@@ -50,6 +56,12 @@ export const ui: Registry = [
     name: "input",
     type: "components:ui",
     files: ["ui/input.tsx"],
+  },
+  {
+    name: "radio-group",
+    type: "components:ui",
+    dependencies: ["@radix-ui/react-radio-group"],
+    files: ["ui/radio-group.tsx"],
   },
   {
     name: "textarea",
