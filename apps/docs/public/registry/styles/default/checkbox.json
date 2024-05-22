@@ -1,0 +1,13 @@
+{
+  "name": "checkbox",
+  "dependencies": [
+    "@radix-ui/react-checkbox"
+  ],
+  "files": [
+    {
+      "name": "checkbox.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport * as CheckboxPrimitive from \"@radix-ui/react-checkbox\"\nimport { cva, VariantProps } from \"class-variance-authority\"\nimport { Check, Minus } from \"lucide-react\"\n\nimport { cn } from \"@/lib/utils\"\n\nconst checkBoxVariants = cva(\n  \"ring-offset-background focus-visible:ring-ring data-[state=checked]:text-foreground peer size-4 shrink-0 border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50\",\n  {\n    variants: {\n      radius: {\n        default: \"rounded-sm\",\n        rounded: \"rounded\",\n        md: \"rounded-md\",\n        lg: \"rounded-lg\",\n        xl: \"rounded-xl\",\n      },\n      color: {\n        default:\n          \"data-[state=checked]:bg-primary-500 data-[state=checked]:text-white\",\n        error:\n          \"data-[state=checked]:bg-error-500 data-[state=checked]:text-white\",\n        success:\n          \"data-[state=checked]:bg-success-500 data-[state=checked]:text-white\",\n        warning:\n          \"data-[state=checked]:bg-warning-500 data-[state=checked]:text-white\",\n        secondary:\n          \"data-[state=checked]:bg-secondary-500 data-[state=checked]:text-white\",\n      },\n    },\n    defaultVariants: {\n      radius: \"default\",\n      color: \"default\",\n    },\n  }\n)\n\ninterface CheckboxProps\n  extends Omit<\n      React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root>,\n      \"color\"\n    >,\n    VariantProps<typeof checkBoxVariants> {\n  icon?: React.ReactNode\n  indeterminate?: boolean\n}\n\nconst Checkbox = React.forwardRef<\n  React.ElementRef<typeof CheckboxPrimitive.Root>,\n  CheckboxProps\n>(({ className, radius, color, icon, indeterminate, ...props }, ref) => (\n  <CheckboxPrimitive.Root\n    ref={ref}\n    className={cn(checkBoxVariants({ radius, color }), className)}\n    {...props}\n  >\n    <CheckboxPrimitive.Indicator\n      className={cn(\"flex items-center justify-center text-current\")}\n    >\n      {indeterminate ? (\n        <Minus className=\"size-4\" />\n      ) : icon ? (\n        icon\n      ) : (\n        <Check className=\"size-4\" />\n      )}\n    </CheckboxPrimitive.Indicator>\n  </CheckboxPrimitive.Root>\n))\nCheckbox.displayName = CheckboxPrimitive.Root.displayName\n\nexport { Checkbox }\n"
+    }
+  ],
+  "type": "components:ui"
+}

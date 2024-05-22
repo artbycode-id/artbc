@@ -1,0 +1,127 @@
+[
+  {
+    "name": "alert",
+    "files": [
+      "ui/alert.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "button",
+    "dependencies": [
+      "@radix-ui/react-slot"
+    ],
+    "files": [
+      "ui/button.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "badge",
+    "files": [
+      "ui/badge.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "label",
+    "files": [
+      "ui/label.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "card",
+    "files": [
+      "ui/card.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "command",
+    "dependencies": [
+      "cmdk"
+    ],
+    "registryDependencies": [
+      "dialog"
+    ],
+    "files": [
+      "ui/command.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "dialog",
+    "dependencies": [
+      "@radix-ui/react-dialog"
+    ],
+    "files": [
+      "ui/dialog.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "checkbox",
+    "dependencies": [
+      "@radix-ui/react-checkbox"
+    ],
+    "files": [
+      "ui/checkbox.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "accordion",
+    "dependencies": [
+      "@radix-ui/react-accordion"
+    ],
+    "files": [
+      "ui/accordion.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "input",
+    "files": [
+      "ui/input.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "select",
+    "dependencies": [
+      "@radix-ui/react-select"
+    ],
+    "files": [
+      "ui/select.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "radio-group",
+    "dependencies": [
+      "@radix-ui/react-radio-group"
+    ],
+    "files": [
+      "ui/radio-group.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "textarea",
+    "files": [
+      "ui/textarea.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "popover",
+    "dependencies": [
+      "@radix-ui/react-popover"
+    ],
+    "files": [
+      "ui/popover.tsx"
+    ],
+    "type": "components:ui"
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "name": "alert",
+  "files": [
+    {
+      "name": "alert.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\n\nimport { cn } from \"@/lib/utils\"\n\nconst alertVariants = cva(\n  \"[&>svg]:text-foreground relative w-full rounded-xl border-2 p-4 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg~*]:pl-7\",\n  {\n    variants: {\n      variant: {\n        default: \"bg-background text-foreground\",\n        filled: \"bg-primary-500 text-white\",\n        outline: \"border-input bg-background text-foreground border\",\n      },\n      radius: {\n        default: \"rounded-xl\",\n        rounded: \"rounded\",\n        sm: \"rounded-sm\",\n        md: \"rounded-md\",\n        lg: \"rounded-lg\",\n      },\n    },\n    defaultVariants: {\n      variant: \"default\",\n      radius: \"default\",\n    },\n  }\n)\n\nconst Alert = React.forwardRef<\n  HTMLDivElement,\n  React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants>\n>(({ className, variant, radius, ...props }, ref) => (\n  <div\n    ref={ref}\n    role=\"alert\"\n    className={cn(alertVariants({ variant, radius }), className)}\n    {...props}\n  />\n))\nAlert.displayName = \"Alert\"\n\nconst AlertTitle = React.forwardRef<\n  HTMLParagraphElement,\n  React.HTMLAttributes<HTMLHeadingElement>\n>(({ className, ...props }, ref) => (\n  <h5\n    ref={ref}\n    className={cn(\n      \"mb-2 text-sm font-semibold leading-none tracking-tight\",\n      className\n    )}\n    {...props}\n  />\n))\nAlertTitle.displayName = \"AlertTitle\"\n\nconst AlertDescription = React.forwardRef<\n  HTMLParagraphElement,\n  React.HTMLAttributes<HTMLParagraphElement>\n>(({ className, ...props }, ref) => (\n  <div\n    ref={ref}\n    className={cn(\"text-sm [&_p]:leading-relaxed\", className)}\n    {...props}\n  />\n))\nAlertDescription.displayName = \"AlertDescription\"\n\nexport { Alert, AlertTitle, AlertDescription }\n"
+    }
+  ],
+  "type": "components:ui"
+}
