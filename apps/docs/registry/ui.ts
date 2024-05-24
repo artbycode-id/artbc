@@ -53,6 +53,13 @@ export const ui: Registry = [
     files: ["ui/accordion.tsx"],
   },
   {
+    name: "multiple-select",
+    type: "components:ui",
+    dependencies: ["cmdk"],
+    registryDependencies: ["badge", "command"],
+    files: ["ui/multiple-select.tsx"],
+  },
+  {
     name: "input",
     type: "components:ui",
     files: ["ui/input.tsx"],
