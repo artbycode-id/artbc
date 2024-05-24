@@ -1,0 +1,13 @@
+{
+  "name": "button",
+  "dependencies": [
+    "@radix-ui/react-slot"
+  ],
+  "files": [
+    {
+      "name": "button.tsx",
+      "content": "\"use client\"\n\nimport * as React from \"react\"\nimport { Slot } from \"@radix-ui/react-slot\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\n\nimport { cn } from \"@/lib/utils\"\n\nimport { Spinner } from \"./spinner\"\n\nconst buttonVariants = cva(\n  \"border-input focus-visible:outline-primary-500 inline-flex items-center justify-center whitespace-nowrap rounded-md border text-sm font-medium focus-visible:outline-dashed focus-visible:outline-2 focus-visible:outline-offset-2 enabled:hover:opacity-80  disabled:cursor-not-allowed disabled:opacity-70\",\n  {\n    variants: {\n      variant: {\n        default: \"bg-background border-input\",\n        filled: \"bg-primary-500 border-primary-500 text-white\",\n        transparent: \"text-primary-500 border-none bg-transparent\",\n        outline: \"border-primary-500 text-primary-500 bg-background\",\n      },\n      size: {\n        default: \"px-4 py-2 text-sm\",\n        xs: \"p-2 text-sm\",\n        md: \"px-6 py-2 text-base\",\n        lg: \"px-8 py-3 text-lg\",\n        xl: \"px-10 py-4 text-xl\",\n      },\n      radius: {\n        default: \"rounded-md\",\n        rounded: \"rounded\",\n        sm: \"rounded-sm\",\n        lg: \"rounded-lg\",\n        xl: \"rounded-xl\",\n      },\n    },\n    defaultVariants: {\n      variant: \"default\",\n      radius: \"default\",\n      size: \"default\",\n    },\n  }\n)\n\nexport interface ButtonProps\n  extends React.ButtonHTMLAttributes<HTMLButtonElement>,\n    VariantProps<typeof buttonVariants> {\n  asChild?: boolean\n  loading?: boolean\n  icon?: React.ReactNode\n}\n\nconst Button = React.forwardRef<HTMLButtonElement, ButtonProps>(\n  (\n    {\n      asChild = false,\n      className,\n      variant,\n      size,\n      radius,\n      loading,\n      disabled,\n      icon = <Spinner size=\"sm\" className=\"mr-2 text-current\" />,\n      children,\n      ...props\n    },\n    ref\n  ) => {\n    const Component = asChild ? Slot : \"button\"\n    return (\n      <Component\n        ref={ref}\n        className={cn(buttonVariants({ variant, size, radius }), className)}\n        disabled={loading || disabled}\n        {...props}\n      >\n        {loading && icon}\n        {children}\n      </Component>\n    )\n  }\n)\nButton.displayName = \"Button\"\n\nexport { Button, buttonVariants }\n"
+    }
+  ],
+  "type": "components:ui"
+}

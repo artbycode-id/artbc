@@ -1,6 +1,5 @@
 #!/usr/bin/env node
-// import { add } from "@/src/commands/add"
-// import { diff } from "@/src/commands/diff"
+import { add } from "@/src/commands/add"
 import { init } from "@/src/commands/init"
 import { Command } from "commander"
 
@@ -13,7 +12,7 @@ async function main() {
   const packageInfo = await getPackageInfo()
 
   const program = new Command()
-    .name("shadcn-ui")
+    .name("artbc-ui")
     .description("add components and dependencies to your project")
     .version(
       packageInfo.version || "1.0.0",
@@ -21,7 +20,7 @@ async function main() {
       "display the version number"
     )
 
-  program.addCommand(init)
+  program.addCommand(init).addCommand(add)
 
   program.parse()
 }
