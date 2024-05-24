@@ -53,6 +53,13 @@ export const ui: Registry = [
     files: ["ui/accordion.tsx"],
   },
   {
+    name: "multiple-select",
+    type: "components:ui",
+    dependencies: ["cmdk"],
+    registryDependencies: ["badge", "command"],
+    files: ["ui/multiple-select.tsx"],
+  },
+  {
     name: "input",
     type: "components:ui",
     files: ["ui/input.tsx"],
@@ -67,7 +74,7 @@ export const ui: Registry = [
     name: "radio-group",
     type: "components:ui",
     dependencies: ["@radix-ui/react-radio-group"],
-    files: ["ui/radio-group.tsx"]
+    files: ["ui/radio-group.tsx"],
   },
   {
     name: "textarea",
