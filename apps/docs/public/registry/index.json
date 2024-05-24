@@ -81,6 +81,20 @@
     "type": "components:ui"
   },
   {
+    "name": "multiple-select",
+    "dependencies": [
+      "cmdk"
+    ],
+    "registryDependencies": [
+      "badge",
+      "command"
+    ],
+    "files": [
+      "ui/multiple-select.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "input",
     "files": [
       "ui/input.tsx"

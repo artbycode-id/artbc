@@ -104,6 +104,19 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: [],
     },
+    "multiple-select": {
+      name: "multiple-select",
+      type: "components:ui",
+      registryDependencies: ["badge", "command"],
+      component: React.lazy(
+        () => import("@/registry/default/ui/multiple-select")
+      ),
+      source: "",
+      files: ["registry/default/ui/multiple-select.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: [],
+    },
     input: {
       name: "input",
       type: "components:ui",
