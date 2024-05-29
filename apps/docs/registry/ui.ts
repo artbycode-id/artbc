@@ -7,6 +7,13 @@ export const ui: Registry = [
     files: ["ui/alert.tsx"],
   },
   {
+    name: "alert-dialog",
+    type: "components:ui",
+    dependencies: ["@radix-ui/react-alert-dialog"],
+    registryDependencies: ["button"],
+    files: ["ui/alert-dialog.tsx"],
+  },
+  {
     name: "button",
     type: "components:ui",
     dependencies: ["@radix-ui/react-slot"],
