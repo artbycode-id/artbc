@@ -60,6 +60,19 @@ export const ui: Registry = [
     files: ["ui/dropdown-menu.tsx"],
   },
   {
+    name: "form",
+    type: "components:ui",
+    dependencies: [
+      "@radix-ui/react-label",
+      "@radix-ui/react-slot",
+      "@hookform/resolvers",
+      "zod",
+      "react-hook-form",
+    ],
+    registryDependencies: ["button", "label"],
+    files: ["ui/form.tsx"],
+  },
+  {
     name: "checkbox",
     type: "components:ui",
     dependencies: ["@radix-ui/react-checkbox"],
