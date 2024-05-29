@@ -105,4 +105,10 @@ export const ui: Registry = [
     dependencies: ["@radix-ui/react-avatar"],
     files: ["ui/avatar.tsx"],
   },
+  {
+    name: "aspect-ratio",
+    type: "components:ui",
+    dependencies: ["@radix-ui/react-aspect-ratio"],
+    files: ["ui/aspect-ratio.tsx"],
+  },
 ]
