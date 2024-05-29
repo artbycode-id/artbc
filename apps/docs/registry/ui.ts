@@ -117,4 +117,10 @@ export const ui: Registry = [
     dependencies: ["sonner", "next-themes"],
     files: ["ui/sonner.tsx"],
   },
+  {
+    name: "switch",
+    type: "components:ui",
+    dependencies: ["@radix-ui/react-switch"],
+    files: ["ui/switch.tsx"],
+  },
 ]
