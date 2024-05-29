@@ -111,4 +111,10 @@ export const ui: Registry = [
     dependencies: ["@radix-ui/react-aspect-ratio"],
     files: ["ui/aspect-ratio.tsx"],
   },
+  {
+    name: "sonner",
+    type: "components:ui",
+    dependencies: ["sonner", "next-themes"],
+    files: ["ui/sonner.tsx"],
+  },
 ]
