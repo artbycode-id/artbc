@@ -18,6 +18,12 @@ export const ui: Registry = [
     files: ["ui/badge.tsx"],
   },
   {
+    name: "breadcrumb",
+    type: "components:ui",
+    dependencies: ["@radix-ui/react-slot"],
+    files: ["ui/breadcrumb.tsx"],
+  },
+  {
     name: "label",
     type: "components:ui",
     files: ["ui/label.tsx"],
