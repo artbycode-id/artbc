@@ -99,4 +99,10 @@ export const ui: Registry = [
     dependencies: ["@radix-ui/react-popover"],
     files: ["ui/popover.tsx"],
   },
+  {
+    name: "avatar",
+    type: "components:ui",
+    dependencies: ["@radix-ui/react-avatar"],
+    files: ["ui/avatar.tsx"],
+  },
 ]
