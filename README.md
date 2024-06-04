@@ -6,7 +6,7 @@ Elegantly crafted components that you can copy, customize, and integrate into yo
 
 ## Documentation
 
-Visit <[http://artbc.id/docs](https://artbc.netlify.app/docs)> to view the documentation.
+Visit [https://artbc.netlify.app](https://artbc.netlify.app) to view the documentation.
 
 ## Contributing
 
