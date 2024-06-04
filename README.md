@@ -1,12 +1,12 @@
 # artbc
 
-Accessible and customizable components that you can copy and paste into your apps. Free. Open Source. **Use this to build your own component library**.
+Elegantly crafted components that you can copy, customize, and integrate into your apps. Accessible. Adaptable. Open Source. **Use this to build your own component library**.
 
 <!-- ![hero](apps/www/public/og.jpg) -->
 
 ## Documentation
 
-Visit <http://artbc.id/docs> to view the documentation.
+Visit <[http://artbc.id/docs](https://artbc.netlify.app/docs)> to view the documentation.
 
 ## Contributing
 
