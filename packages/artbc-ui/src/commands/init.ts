@@ -186,7 +186,7 @@ export async function promptForConfig(
   ])
 
   const config = rawConfigSchema.parse({
-    $schema: "https://ui.shadcn.com/schema.json",
+    $schema: "https://artbc.netlify.app/schema.json",
     style: options.style,
     tailwind: {
       config: options.tailwindConfig,
