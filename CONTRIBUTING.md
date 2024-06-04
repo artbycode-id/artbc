@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for your interest in contributing to artbc.id. We're happy to have you here.
+Thanks for your interest in contributing to artbc.netlify.app. We're happy to have you here.
 
 Please take a moment to review this document before submitting your first pull request. We also strongly recommend that you check for open issues and pull requests to see if someone else is working on something similar.
 
@@ -67,7 +67,7 @@ pnpm --filter=artbc-ui dev
 The documentation for this project is located in the `docs` workspace. You can run the documentation locally by running the following command:
 
 ```bash
-pnpm --filter=www dev
+pnpm --filter=docs dev
 ```
 
 Documentation is written using [MDX](https://mdxjs.com). You can find the documentation files in the `apps/docs/content/docs` directory.
