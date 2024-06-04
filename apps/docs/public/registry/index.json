@@ -24,6 +24,9 @@
     "dependencies": [
       "@radix-ui/react-slot"
     ],
+    "registryDependencies": [
+      "spinner"
+    ],
     "files": [
       "ui/button.tsx"
     ],
@@ -227,6 +230,13 @@
     ],
     "files": [
       "ui/switch.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "spinner",
+    "files": [
+      "ui/spinner.tsx"
     ],
     "type": "components:ui"
   }
