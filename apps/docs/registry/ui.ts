@@ -160,4 +160,10 @@ export const ui: Registry = [
     type: "components:ui",
     files: ["ui/skeleton.tsx"],
   },
+  {
+    name: "tooltip",
+    type: "components:ui",
+    dependencies: ["@radix-ui/react-tooltip"],
+    files: ["ui/tooltip.tsx"],
+  },
 ]
