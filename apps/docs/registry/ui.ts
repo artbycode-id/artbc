@@ -149,4 +149,10 @@ export const ui: Registry = [
     type: "components:ui",
     files: ["ui/spinner.tsx"],
   },
+  {
+    name: "slider",
+    type: "components:ui",
+    dependencies: ["@radix-ui/react-slider"],
+    files: ["ui/slider.tsx"],
+  },
 ]
