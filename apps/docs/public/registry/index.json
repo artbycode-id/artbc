@@ -7,9 +7,25 @@
     "type": "components:ui"
   },
   {
+    "name": "alert-dialog",
+    "dependencies": [
+      "@radix-ui/react-alert-dialog"
+    ],
+    "registryDependencies": [
+      "button"
+    ],
+    "files": [
+      "ui/alert-dialog.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "button",
     "dependencies": [
       "@radix-ui/react-slot"
+    ],
+    "registryDependencies": [
+      "spinner"
     ],
     "files": [
       "ui/button.tsx"
@@ -20,6 +36,16 @@
     "name": "badge",
     "files": [
       "ui/badge.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "breadcrumb",
+    "dependencies": [
+      "@radix-ui/react-slot"
+    ],
+    "files": [
+      "ui/breadcrumb.tsx"
     ],
     "type": "components:ui"
   },
@@ -57,6 +83,34 @@
     ],
     "files": [
       "ui/dialog.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "dropdown-menu",
+    "dependencies": [
+      "@radix-ui/react-dropdown-menu"
+    ],
+    "files": [
+      "ui/dropdown-menu.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "form",
+    "dependencies": [
+      "@radix-ui/react-label",
+      "@radix-ui/react-slot",
+      "@hookform/resolvers",
+      "zod",
+      "react-hook-form"
+    ],
+    "registryDependencies": [
+      "button",
+      "label"
+    ],
+    "files": [
+      "ui/form.tsx"
     ],
     "type": "components:ui"
   },
@@ -135,6 +189,54 @@
     ],
     "files": [
       "ui/popover.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "avatar",
+    "dependencies": [
+      "@radix-ui/react-avatar"
+    ],
+    "files": [
+      "ui/avatar.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "aspect-ratio",
+    "dependencies": [
+      "@radix-ui/react-aspect-ratio"
+    ],
+    "files": [
+      "ui/aspect-ratio.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "sonner",
+    "dependencies": [
+      "sonner",
+      "next-themes"
+    ],
+    "files": [
+      "ui/sonner.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "switch",
+    "dependencies": [
+      "@radix-ui/react-switch"
+    ],
+    "files": [
+      "ui/switch.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "spinner",
+    "files": [
+      "ui/spinner.tsx"
     ],
     "type": "components:ui"
   }

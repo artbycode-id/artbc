@@ -3,6 +3,9 @@
   "dependencies": [
     "@radix-ui/react-slot"
   ],
+  "registryDependencies": [
+    "spinner"
+  ],
   "files": [
     {
       "name": "button.tsx",

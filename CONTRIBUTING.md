@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for your interest in contributing to artbc.id. We're happy to have you here.
+Thanks for your interest in contributing to artbc.netlify.app. We're happy to have you here.
 
 Please take a moment to review this document before submitting your first pull request. We also strongly recommend that you check for open issues and pull requests to see if someone else is working on something similar.
 
@@ -13,35 +13,6 @@ This repository is a monorepo.
 - We use [pnpm](https://pnpm.io) and [`workspaces`](https://pnpm.io/workspaces) for development.
 - We use [Turborepo](https://turbo.build/repo) as our build system.
 - We use [changesets](https://github.com/changesets/changesets) for managing releases.
-
-<!-- ## Structure
-
-This repository is structured as follows:
-
-```
-apps
-└── www
-    ├── app
-    ├── components
-    ├── content
-    └── registry
-        ├── default
-        │   ├── example
-        │   └── ui
-        └── new-york
-            ├── example
-            └── ui
-packages
-└── cli
-```
-
-| Path                  | Description                              |
-| --------------------- | ---------------------------------------- |
-| `apps/www/app`        | The Next.js application for the website. |
-| `apps/www/components` | The React components for the website.    |
-| `apps/www/content`    | The content for the website.             |
-| `apps/www/registry`   | The registry for the components.         |
-| `packages/cli`        | The `shadcn-ui` package.                 | -->
 
 ## Development
 
@@ -73,55 +44,33 @@ git checkout -b my-new-branch
 pnpm install
 ```
 
-<!-- ### Run a workspace
+### Run a workspace
 
 You can use the `pnpm --filter=[WORKSPACE]` command to start the development process for a workspace.
 
 #### Examples
 
-1. To run the `artbc.id` website:
+1. To run the `artbc.netlify.app` website:
 
 ```bash
-pnpm --filter=www dev
+pnpm --filter=docs dev
 ```
 
 2. To run the `artbc-ui` package:
 
 ```bash
 pnpm --filter=artbc-ui dev
-``` -->
-
-<!-- ## Documentation
-
-The documentation for this project is located in the `www` workspace. You can run the documentation locally by running the following command:
-
-```bash
-pnpm --filter=www dev
-``` -->
-
-Documentation is written using [MDX](https://mdxjs.com). You can find the documentation files in the `apps/www/content/docs` directory.
-
-<!-- ## Components
-
-We use a registry system for developing components. You can find the source code for the components under `apps/www/registry`. The components are organized by styles.
-
-```bash
-apps
-└── www
-    └── registry
-        ├── default
-        │   ├── example
-        │   └── ui
-        └── new-york
-            ├── example
-            └── ui
 ```
 
-When adding or modifying components, please ensure that:
+## Documentation
 
-1. You make the changes for every style.
-2. You update the documentation.
-3. You run `pnpm build:registry` to update the registry. -->
+The documentation for this project is located in the `docs` workspace. You can run the documentation locally by running the following command:
+
+```bash
+pnpm --filter=docs dev
+```
+
+Documentation is written using [MDX](https://mdxjs.com). You can find the documentation files in the `apps/docs/content/docs` directory.
 
 ## Commit Convention
 
@@ -157,19 +106,3 @@ If you are interested in the detailed specification you can visit
 ## Requests for new components
 
 If you have a request for a new component, please open a discussion on GitHub. We'll be happy to help you out.
-
-<!-- ## CLI
-
-The `shadcn-ui` package is a CLI for adding components to your project. You can find the documentation for the CLI [here](https://ui.shadcn.com/docs/cli).
-
-Any changes to the CLI should be made in the `packages/cli` directory. If you can, it would be great if you could add tests for your changes.
-
-## Testing
-
-Tests are written using [Vitest](https://vitest.dev). You can run all the tests from the root of the repository.
-
-```bash
-pnpm test
-``` -->
-
-Please ensure that the tests are passing when submitting a pull request. If you're adding new features, please include tests.

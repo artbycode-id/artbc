@@ -1,0 +1,10 @@
+{
+  "name": "spinner",
+  "files": [
+    {
+      "name": "spinner.tsx",
+      "content": "import * as React from \"react\"\nimport { cva, type VariantProps } from \"class-variance-authority\"\n\nconst spinnerVariants = cva(\"animate-spin\", {\n  variants: {\n    size: {\n      sm: \"size-4\",\n      md: \"size-8\",\n      lg: \"size-16\",\n      xl: \"size-24\",\n    },\n    variant: {\n      light: \"text-white\",\n      primary: \"text-primary-500\",\n    },\n  },\n  defaultVariants: {\n    size: \"md\",\n    variant: \"primary\",\n  },\n})\n\nexport interface SpinnerProps\n  extends React.SVGAttributes<SVGSVGElement>,\n    VariantProps<typeof spinnerVariants> {}\n\nexport const Spinner = React.forwardRef<SVGSVGElement, SpinnerProps>(\n  ({ className, variant, size, ...props }, ref) => {\n    return (\n      <>\n        <svg\n          className={spinnerVariants({ variant, size, className })}\n          viewBox=\"0 0 24 24\"\n          fill=\"none\"\n          ref={ref}\n          {...props}\n        >\n          <circle\n            className=\"opacity-25\"\n            cx=\"12\"\n            cy=\"12\"\n            r=\"10\"\n            stroke=\"currentColor\"\n            strokeWidth=\"4\"\n          ></circle>\n          <path\n            className=\"opacity-75\"\n            fill=\"currentColor\"\n            d=\"M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z\"\n          ></path>\n        </svg>\n        <span className=\"sr-only\">Loading</span>\n      </>\n    )\n  }\n)\n"
+    }
+  ],
+  "type": "components:ui"
+}

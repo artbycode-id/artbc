@@ -1,0 +1,14 @@
+{
+  "name": "sonner",
+  "dependencies": [
+    "sonner",
+    "next-themes"
+  ],
+  "files": [
+    {
+      "name": "sonner.tsx",
+      "content": "\"use client\"\n\nimport { useTheme } from \"next-themes\"\nimport { Toaster as Sonner } from \"sonner\"\n\ntype ToasterProps = React.ComponentProps<typeof Sonner>\n\nconst Toaster = ({ ...props }: ToasterProps) => {\n  const { theme = \"system\" } = useTheme()\n\n  return (\n    <Sonner\n      theme={theme as ToasterProps[\"theme\"]}\n      className=\"toaster group\"\n      toastOptions={{\n        classNames: {\n          toast:\n            \"group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg\",\n          description: \"group-[.toast]:text-foreground\",\n          actionButton:\n            \"group-[.toast]:bg-primary-500 group-[.toast]:text-white\",\n          cancelButton:\n            \"group-[.toast]:bg-white group-[.toast]:text-foreground\",\n          icon: \"group-data-[type=error]:text-error-500 group-data-[type=success]:text-success-500 group-data-[type=warning]:text-warning-500 group-data-[type=info]:text-blue-500\",\n        },\n      }}\n      {...props}\n    />\n  )\n}\n\nexport { Toaster }\n"
+    }
+  ],
+  "type": "components:ui"
+}

@@ -17,6 +17,7 @@ export const ui: Registry = [
     name: "button",
     type: "components:ui",
     dependencies: ["@radix-ui/react-slot"],
+    registryDependencies: ["spinner"],
     files: ["ui/button.tsx"],
   },
   {
@@ -148,5 +149,27 @@ export const ui: Registry = [
     type: "components:ui",
     dependencies: ["@radix-ui/react-tabs"],
     files: ["ui/tabs.tsx"],
+  },
+  {
+    name: "spinner",
+    type: "components:ui",
+    files: ["ui/spinner.tsx"],
+  },
+  {
+    name: "slider",
+    type: "components:ui",
+    dependencies: ["@radix-ui/react-slider"],
+    files: ["ui/slider.tsx"],
+  },
+  {
+    name: "skeleton",
+    type: "components:ui",
+    files: ["ui/skeleton.tsx"],
+  },
+  {
+    name: "tooltip",
+    type: "components:ui",
+    dependencies: ["@radix-ui/react-tooltip"],
+    files: ["ui/tooltip.tsx"],
   },
 ]
