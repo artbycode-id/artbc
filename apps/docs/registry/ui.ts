@@ -145,6 +145,12 @@ export const ui: Registry = [
     files: ["ui/switch.tsx"],
   },
   {
+    name: "tabs",
+    type: "components:ui",
+    dependencies: ["@radix-ui/react-tabs"],
+    files: ["ui/tabs.tsx"],
+  },
+  {
     name: "spinner",
     type: "components:ui",
     files: ["ui/spinner.tsx"],
