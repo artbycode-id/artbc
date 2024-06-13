@@ -251,6 +251,17 @@ export const Index: Record<string, any> = {
       subcategory: "undefined",
       chunks: [],
     },
+    separator: {
+      name: "separator",
+      type: "components:ui",
+      registryDependencies: undefined,
+      component: React.lazy(() => import("@/registry/default/ui/separator")),
+      source: "",
+      files: ["registry/default/ui/separator.tsx"],
+      category: "undefined",
+      subcategory: "undefined",
+      chunks: [],
+    },
     switch: {
       name: "switch",
       type: "components:ui",

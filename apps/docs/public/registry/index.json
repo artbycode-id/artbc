@@ -224,6 +224,16 @@
     "type": "components:ui"
   },
   {
+    "name": "separator",
+    "dependencies": [
+      "@radix-ui/react-separator"
+    ],
+    "files": [
+      "ui/separator.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "switch",
     "dependencies": [
       "@radix-ui/react-switch"

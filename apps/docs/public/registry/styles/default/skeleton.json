@@ -3,7 +3,7 @@
   "files": [
     {
       "name": "skeleton.tsx",
-      "content": "import React from \"react\"\r\n\r\nimport { cn } from \"@/lib/utils\"\r\n\r\nconst Skeleton = ({\r\n  className,\r\n  ...props\r\n}: React.HTMLAttributes<HTMLDivElement>) => {\r\n  return (\r\n    <div\r\n      className={cn(\"animate-pulse rounded-md bg-gray-100\", className)}\r\n      {...props}\r\n    />\r\n  )\r\n}\r\n\r\nexport { Skeleton }\r\n"
+      "content": "import React from \"react\"\n\nimport { cn } from \"@/lib/utils\"\n\nconst Skeleton = ({\n  className,\n  ...props\n}: React.HTMLAttributes<HTMLDivElement>) => {\n  return (\n    <div\n      className={cn(\"animate-pulse rounded-md bg-gray-100\", className)}\n      {...props}\n    />\n  )\n}\n\nexport { Skeleton }\n"
     }
   ],
   "type": "components:ui"
