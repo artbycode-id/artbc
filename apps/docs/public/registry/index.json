@@ -234,9 +234,46 @@
     "type": "components:ui"
   },
   {
+    "name": "tabs",
+    "dependencies": [
+      "@radix-ui/react-tabs"
+    ],
+    "files": [
+      "ui/tabs.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
     "name": "spinner",
     "files": [
       "ui/spinner.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "slider",
+    "dependencies": [
+      "@radix-ui/react-slider"
+    ],
+    "files": [
+      "ui/slider.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "skeleton",
+    "files": [
+      "ui/skeleton.tsx"
+    ],
+    "type": "components:ui"
+  },
+  {
+    "name": "tooltip",
+    "dependencies": [
+      "@radix-ui/react-tooltip"
+    ],
+    "files": [
+      "ui/tooltip.tsx"
     ],
     "type": "components:ui"
   }
