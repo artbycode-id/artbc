@@ -139,6 +139,12 @@ export const ui: Registry = [
     files: ["ui/sonner.tsx"],
   },
   {
+    name: "separator",
+    type: "components:ui",
+    dependencies: ["@radix-ui/react-separator"],
+    files: ["ui/separator.tsx"],
+  },
+  {
     name: "switch",
     type: "components:ui",
     dependencies: ["@radix-ui/react-switch"],
